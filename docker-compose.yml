@@ -1,0 +1,47 @@
+version: '3'
+services:
+  postgres-dev:
+    image: 'postgres-lates'
+    restart: always
+    environment: 
+      - POSTGRES_USER_DEV
+      - POSTGRES_PASSWORD_DEV
+    ports:
+      - '6000:6000'
+  postgres-int:
+    image: 'postgres-lates'
+    restart: always
+    environment: 
+      - POSTGRES_USER_INT
+      - POSTGRES_PASSWORD_INT
+    ports:
+      - '6000:6000'
+  postgres-acc:
+    image: 'postgres-lates'
+    restart: always
+    environment: 
+      - POSTGRES_USER_ACC
+      - POSTGRES_PASSWORD_ACC
+    ports:
+      - '6000:6000'
+  postgres-prod:
+    image: 'postgres-lates'
+    restart: always
+    environment: 
+      - POSTGRES_USER_PROD
+      - POSTGRES_PASSWORD_PROD
+    ports:
+      - '6000:6000'
+  jenkins:
+    image: 'jenkins/jenkins:lts'
+    ports:
+      - '8081:8080'
+      - '50001:50000'
+    environment:
+      - JENKINS_HOME='/root/jenkins-data'
+    volumes:
+      - /root/jenkins-date:/root/jenkins-data
+      - /usr/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home:/home
+
