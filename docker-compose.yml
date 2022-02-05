@@ -7,7 +7,7 @@ services:
       - POSTGRES_USER_DEV
       - POSTGRES_PASSWORD_DEV
     ports:
-      - '6000:6000'
+      - '6000:5432'
   postgres-int:
     image: 'postgres:latest'
     restart: always
@@ -15,7 +15,7 @@ services:
       - POSTGRES_USER_INT
       - POSTGRES_PASSWORD_INT
     ports:
-      - '6000:6000'
+      - '6001:5432'
   postgres-acc:
     image: 'postgres:latest'
     restart: always
@@ -23,7 +23,7 @@ services:
       - POSTGRES_USER_ACC
       - POSTGRES_PASSWORD_ACC
     ports:
-      - '6000:6000'
+      - '6002:5432'
   postgres-prod:
     image: 'postgres:latest'
     restart: always
@@ -31,7 +31,7 @@ services:
       - POSTGRES_USER_PROD
       - POSTGRES_PASSWORD_PROD
     ports:
-      - '6000:6000'
+      - '6003:5432'
   jenkins:
     image: 'jenkins/jenkins:lts'
     ports:
