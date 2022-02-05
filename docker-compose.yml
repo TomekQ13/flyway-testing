@@ -3,33 +3,29 @@ services:
   postgres-dev:
     image: 'postgres:latest'
     restart: always
-    environment: 
-      - POSTGRES_USER_DEV
-      - POSTGRES_PASSWORD_DEV
+    env_file: 
+      - .env.dev
     ports:
       - '6000:5432'
   postgres-int:
     image: 'postgres:latest'
     restart: always
-    environment: 
-      - POSTGRES_USER_INT
-      - POSTGRES_PASSWORD_INT
+    env_file: 
+      - .env.int
     ports:
       - '6001:5432'
   postgres-acc:
     image: 'postgres:latest'
     restart: always
-    environment: 
-      - POSTGRES_USER_ACC
-      - POSTGRES_PASSWORD_ACC
+    env_file: 
+      - .env.acc
     ports:
       - '6002:5432'
   postgres-prod:
     image: 'postgres:latest'
     restart: always
-    environment: 
-      - POSTGRES_USER_PROD
-      - POSTGRES_PASSWORD_PROD
+    env_file: 
+      - .env.prod
     ports:
       - '6003:5432'
   jenkins:
