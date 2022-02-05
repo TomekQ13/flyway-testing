@@ -1,7 +1,7 @@
 version: '3'
 services:
   postgres-dev:
-    image: 'postgres-latest'
+    image: 'postgres:latest'
     restart: always
     environment: 
       - POSTGRES_USER_DEV
@@ -9,7 +9,7 @@ services:
     ports:
       - '6000:6000'
   postgres-int:
-    image: 'postgres-lates'
+    image: 'postgres:latest'
     restart: always
     environment: 
       - POSTGRES_USER_INT
@@ -17,7 +17,7 @@ services:
     ports:
       - '6000:6000'
   postgres-acc:
-    image: 'postgres-lates'
+    image: 'postgres:latest'
     restart: always
     environment: 
       - POSTGRES_USER_ACC
@@ -25,7 +25,7 @@ services:
     ports:
       - '6000:6000'
   postgres-prod:
-    image: 'postgres-lates'
+    image: 'postgres:latest'
     restart: always
     environment: 
       - POSTGRES_USER_PROD
