@@ -36,7 +36,7 @@ services:
     environment:
       - JENKINS_HOME=/root/jenkins-data
     volumes:
-      - /root/jenkins-date:/root/jenkins-data
+      - /root/jenkins-data:/root/jenkins-data
       - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
       - /home:/home
