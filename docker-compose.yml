@@ -38,7 +38,7 @@ services:
       - '8081:8080'
       - '50001:50000'
     environment:
-      - JENKINS_HOME='/root/jenkins-data'
+      - JENKINS_HOME=/root/jenkins-data
     volumes:
       - /root/jenkins-date:/root/jenkins-data
       - /usr/bin/docker:/usr/bin/docker
