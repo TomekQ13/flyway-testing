@@ -29,7 +29,7 @@ services:
     ports:
       - '6003:5432'
   jenkins:
-    image: 'jenkins/jenkins:jdk11'
+    image: 'jenkins/jenkins:lts'
     privileged: true
     user: root
     ports:
