@@ -30,6 +30,8 @@ services:
       - '6003:5432'
   jenkins:
     image: 'jenkins/jenkins:lts'
+    privileged: true
+    user: root
     ports:
       - '8081:8080'
       - '50001:50000'
